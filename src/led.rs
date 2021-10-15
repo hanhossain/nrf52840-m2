@@ -16,19 +16,19 @@ impl Led {
     /// Creates the red LED (LED1, p0.30)
     pub fn red<T>(pin: P0_30<T>) -> Led {
         let pin = pin.degrade().into_push_pull_output(Level::High);
-        Led { pin }
+        Led::new(pin)
     }
 
     /// Creates the green LED (LED2, p0.29)
     pub fn green<T>(pin: P0_29<T>) -> Led {
         let pin = pin.degrade().into_push_pull_output(Level::High);
-        Led { pin }
+        Led::new(pin)
     }
 
     /// Creates the blue LED (LED3, p0.31)
     pub fn blue<T>(pin: P0_31<T>) -> Led {
         let pin = pin.degrade().into_push_pull_output(Level::High);
-        Led { pin }
+        Led::new(pin)
     }
 
     /// Turns the LED on

@@ -7,7 +7,7 @@ use nrf52840_hal as _;
 use cortex_m::asm;
 use cortex_m_rt::entry;
 use log::LevelFilter;
-use nrf52840_hal::gpio::{p0, Level};
+use nrf52840_hal::gpio::p0;
 use nrf52840_hal::pac::{CorePeripherals, Peripherals};
 use nrf52840_hal::prelude::*;
 use nrf52840_hal::Delay;

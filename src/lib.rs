@@ -1,5 +1,5 @@
 #![no_std]
-#![no_main]
+#![warn(rust_2018_idioms)]
 
 pub mod led;
 pub mod logger;

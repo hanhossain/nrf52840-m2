@@ -8,11 +8,11 @@ static LOGGER: Logger = Logger;
 struct Logger;
 
 impl Log for Logger {
-    fn enabled(&self, metadata: &Metadata) -> bool {
+    fn enabled(&self, metadata: &Metadata<'_>) -> bool {
         metadata.level() <= Level::Trace
     }
 
-    fn log(&self, record: &Record) {
+    fn log(&self, record: &Record<'_>) {
         if self.enabled(record.metadata()) {
             match (record.file(), record.line()) {
                 (Some(file), Some(line)) => rprintln!(
@@ -49,7 +49,7 @@ pub fn init_with_level(level: LevelFilter) {
 }
 
 #[panic_handler]
-fn panic(info: &PanicInfo) -> ! {
+fn panic(info: &PanicInfo<'_>) -> ! {
     log::error!("{}", info);
 
     // trigger a hard fault to abort
