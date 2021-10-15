@@ -1,13 +1,9 @@
 #![no_std]
 #![no_main]
 
-mod leds;
-mod logger;
-
 // pull in the memory layout
 use nrf52840_hal as _;
 
-use crate::leds::Led;
 use cortex_m::asm;
 use cortex_m_rt::entry;
 use log::LevelFilter;
@@ -15,6 +11,8 @@ use nrf52840_hal::gpio::{p0, Level};
 use nrf52840_hal::pac::{CorePeripherals, Peripherals};
 use nrf52840_hal::prelude::*;
 use nrf52840_hal::Delay;
+use nrf52840_m2::led::Led;
+use nrf52840_m2::logger;
 
 #[entry]
 fn main() -> ! {

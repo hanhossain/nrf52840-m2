@@ -12,12 +12,6 @@ nrf52840-hal = "0.14.0"
 log = "0.4.14"
 rtt-target = { version = "0.3.1", features = ["cortex-m"] }
 
-# this lets you use `cargo fix`!
-[[bin]]
-name = "nrf52840-m2"
-test = false
-bench = false
-
 [profile.release]
 codegen-units = 1 # better optimizations
 debug = true # symbols are nice and they don't increase the size on Flash
