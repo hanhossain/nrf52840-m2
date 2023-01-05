@@ -2,6 +2,7 @@
 
 members = [
     "nrf52840-m2",
+    "nrf52840-m2-dk",
 ]
 
 [profile.release]

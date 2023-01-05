@@ -1,0 +1,9 @@
+[package]
+authors = ["Han Hossain <ahanuf12@gmail.com>"]
+edition = "2021"
+readme = "README.md"
+name = "nrf52840-m2-dk"
+version = "0.1.0"
+
+[dependencies]
+nrf52840-m2 = { path = "../nrf52840-m2" }
