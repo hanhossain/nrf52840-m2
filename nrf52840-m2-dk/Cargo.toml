@@ -6,4 +6,7 @@ name = "nrf52840-m2-dk"
 version = "0.1.0"
 
 [dependencies]
+cortex-m = "0.7.3"
+cortex-m-rt = "0.7.0"
+log = "0.4.14"
 nrf52840-m2 = { path = "../nrf52840-m2" }
